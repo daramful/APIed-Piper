@@ -1,5 +1,5 @@
 # MP #3: APIed Piper
-### Due: October 30th, 2017, 11.59PM CDT
+### Due: November 6th, 2017, 11.59PM CDT
 
 ## Table of Contents
 1. [Assignment](#assignment)
@@ -23,18 +23,16 @@
 |----------|---------|-----------------------------------------------------|
 | users    | GET     | Respond with a List of users                        |
 |          | POST    | Create a new user. Respond with details of new user |
-|          | OPTIONS | See the query parameters below                      |
 | users/:id| GET     | Respond with details of specified user or 404 error |
 |          | PUT     | Replace entire user with supplied user or 404 error |
 |          | DELETE  | Delete specified user or 404 error                  |
 | tasks    | GET     | Respond with a List of tasks                        |
 |          | POST    | Create a new task. Respond with details of new task |
-|          | OPTIONS | See the query parameters below                      |
 | tasks/:id| GET    | Respond with details of specified task or 404 error  |
 |          | PUT     | Replace entire task with supplied task or 404 error |
 |          | DELETE  | Delete specified user or 404 error                  |
 
-In addition, the API has the following JSON encoded query string parameters for the GET requests to the `users` and `tasks` endpoints:
+**NOTE**: In addition, the API has the following JSON encoded query string parameters for the GET requests to the `users` and `tasks` endpoints:
 
 | Parameter | Description                                                                                  |
 |----------|----------------------------------------------------------------------------------------------|
@@ -151,3 +149,11 @@ Contains sample task descriptions. Edit if you want, I don't care.
 ## Submission Details
 1. [Submission Form](https://goo.gl/forms/uEawyS1GaDNk8xaN2)
 2. You need to also submit at [the submission website](http://uiucwp.com)
+
+
+
+##Personal Note:
+Because my Python is Python3, Commands were the followings:
+1. alias python="/usr/bin/python2.7"
+2. python dbClean.py -u "localhost" -p 3000
+3. python dbFill.py -u "localhost" -p 3000 -n 20 -t 100

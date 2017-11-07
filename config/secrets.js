@@ -3,5 +3,5 @@
  */
 module.exports = {
     token : "secret-starter-mern",
-    mongo_connection : "mongodb://<dbuser>:<dbpassword>@ds040017.mlab.com:40017/todolist-1"
+    mongo_connection : "mongodb://admin:password@ds249565.mlab.com:49565/databunk"
 };
