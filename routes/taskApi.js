@@ -24,8 +24,7 @@ module.exports = function (router) {
             limit = eval("(" + req.query.limit + ")");
         if (typeof req.query.count !== null)
             count = eval("(" + req.query.count + ")");
-        if (count != null) {
-            var query = Task.find(where)
+        var query = Task.find(where)
                 .sort(sort)
                 .select(select)
                 .skip(skip)
@@ -36,18 +35,6 @@ module.exports = function (router) {
                         res.status(500).send(err);
                     res.status(200).json({ message: "OK", data: tasks });
                 });
-        } else {
-            var query = Task.find(where)
-                .sort(sort)
-                .select(select)
-                .skip(skip)
-                .limit(limit)
-                .exec(function(err, tasks) {
-                    if (err | tasks === null)
-                        res.status(500).send(err);
-                    res.status(200).json({ message: "OK", data: tasks });
-                });
-        }
     });
 
     taskRoute.post(function(req, res) {
